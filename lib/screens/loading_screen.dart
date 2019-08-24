@@ -1,21 +1,12 @@
 import 'package:flutter_web/material.dart';
-import 'screens/loading_screen.dart';
+import 'first_screen.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class LoadingScreen extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: LoadingScreen(),
-    );
-  }
+  _LoadingScreenState createState() => _LoadingScreenState();
 }
 
-class MyHomePage extends StatelessWidget {
-  MyHomePage({Key key}) : super(key: key);
-
+class _LoadingScreenState extends State<LoadingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,5 +25,16 @@ class MyHomePage extends StatelessWidget {
     );
   }
 
-  void load() {}
+  @override
+  void initState() {
+    super.initState();
+    load();
+  }
+
+  void load() {
+    Future.delayed(Duration(seconds: 3), () {
+      Route route = MaterialPageRoute(builder: (context) => FirstScreen());
+      Navigator.pushReplacement(context, route);
+    });
+  }
 }

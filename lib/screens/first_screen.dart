@@ -8,15 +8,8 @@ class FirstScreen extends StatefulWidget {
 class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
-    return Flex(
-      direction: Axis.horizontal,
-      children: <Widget>[
-        Expanded(
-          child: Row(
-            children: <Widget>[Text('!!!')],
-          ),
-        )
-      ],
+    return Container(
+      child: Text('FIRST!!!'),
     );
   }
 }
