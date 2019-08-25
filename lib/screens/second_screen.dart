@@ -25,7 +25,7 @@ class _SecondScreenState extends State<SecondScreen> {
         title: Row(
           children: <Widget>[
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              //mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
                   'ПРО',
@@ -38,15 +38,60 @@ class _SecondScreenState extends State<SecondScreen> {
           ],
         ),
       ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Text(
-              'Выберите область деятельности:',
-              style: TextStyle(fontSize: 35),
+      body: Column(
+        children: <Widget>[
+          Text(
+            'Выберите область деятельности:',
+            style: TextStyle(fontSize: 35),
+          ),
+          FlatButton(
+            padding: EdgeInsets.all(15),
+            onPressed: () {},
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image(
+                  image: AssetImage('images/service_icon.png'),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 100),
+                  child: Text(
+                    'Услуги',
+                    style: TextStyle(fontSize: 35),
+                  ),
+                )
+              ],
             ),
-          ],
-        ),
+          ),
+          FlatButton(
+            padding: EdgeInsets.all(15),
+            onPressed: () {},
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image(
+                  image: AssetImage('images/sales.png'),
+                ),
+                SizedBox(width: 12),
+                Text('Продажа товаров', style: TextStyle(fontSize: 35))
+              ],
+            ),
+          ),
+          FlatButton(
+            padding: EdgeInsets.all(15),
+            onPressed: () {},
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image(
+                  image: AssetImage('images/production.png'),
+                ),
+                SizedBox(width: 12),
+                Text('Производство', style: TextStyle(fontSize: 35))
+              ],
+            ),
+          ),
+        ],
       ),
     );
     ;
