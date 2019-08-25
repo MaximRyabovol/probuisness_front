@@ -1,4 +1,5 @@
 import 'package:flutter_web/material.dart';
+import 'package:probuisnessfront/screens/first_screen.dart';
 
 class SecondScreen extends StatefulWidget {
   @override
@@ -11,6 +12,14 @@ class _SecondScreenState extends State<SecondScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(
+            Icons.accessibility_new,
+            color: Colors.blue,
+          ),
+          onPressed: () => Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => FirstScreen())),
+        ),
         backgroundColor: Colors.white,
         elevation: 0,
         title: Row(
@@ -36,10 +45,6 @@ class _SecondScreenState extends State<SecondScreen> {
               'Выберите область деятельности:',
               style: TextStyle(fontSize: 35),
             ),
-            FlatButton(
-              onPressed: () {},
-              child: Row(),
-            )
           ],
         ),
       ),
