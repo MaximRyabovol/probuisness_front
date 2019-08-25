@@ -1,9 +1,9 @@
 import 'package:flutter_web/material.dart';
 
 class StandardButton extends StatelessWidget {
-  const StandardButton({
-    Key key,
-  }) : super(key: key);
+  final String title;
+
+  StandardButton({this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class StandardButton extends StatelessWidget {
           minWidth: 200.0,
           height: 42.0,
           child: Text(
-            'Я хочу бизнес',
+            '$title',
             style: TextStyle(
               color: Colors.white,
               fontSize: 18.0,

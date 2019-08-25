@@ -38,7 +38,15 @@ class _FirstScreenState extends State<FirstScreen> {
                 ),
               ),
               Text('Кем вы являетесь: ', style: TextStyle(fontSize: 35)),
-              StandardButton(),
+              StandardButton(
+                title: 'Я хочу бизнес',
+              ),
+              StandardButton(
+                title: 'У меня уже есть бизнес',
+              ),
+              StandardButton(
+                title: 'Хочу инвесстировать',
+              )
             ],
           ),
         ),
