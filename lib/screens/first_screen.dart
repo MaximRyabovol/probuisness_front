@@ -1,5 +1,6 @@
 import 'package:flutter_web/material.dart';
 import 'package:probuisnessfront/widgets/StandardButton.dart';
+import 'package:probuisnessfront/screens/second_screen.dart';
 
 class FirstScreen extends StatefulWidget {
   @override
@@ -40,12 +41,17 @@ class _FirstScreenState extends State<FirstScreen> {
               Text('Кем вы являетесь: ', style: TextStyle(fontSize: 35)),
               StandardButton(
                 title: 'Я хочу бизнес',
+                action: () {
+                  Route route =
+                      MaterialPageRoute(builder: (context) => SecondScreen());
+                  Navigator.pushReplacement(context, route);
+                },
               ),
               StandardButton(
                 title: 'У меня уже есть бизнес',
               ),
               StandardButton(
-                title: 'Хочу инвесстировать',
+                title: 'Хочу инвесстироватьx',
               )
             ],
           ),

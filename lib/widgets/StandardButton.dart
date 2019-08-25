@@ -2,8 +2,9 @@ import 'package:flutter_web/material.dart';
 
 class StandardButton extends StatelessWidget {
   final String title;
+  final Function action;
 
-  StandardButton({this.title});
+  StandardButton({this.title, this.action});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class StandardButton extends StatelessWidget {
         color: Color(0xff1656FC),
         borderRadius: BorderRadius.circular(30.0),
         child: MaterialButton(
-          onPressed: () {},
+          onPressed: action,
           minWidth: 200.0,
           height: 42.0,
           child: Text(
